@@ -86,7 +86,7 @@ end
 
 M.on_attach = function(client, bufnr)
   if client.name == "tsserver" then
-    client.server_capabilities.document_formatting = false
+    client.server_capabilities.document_formatting = true
   end
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
@@ -96,6 +96,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status_ok then
+  print('not ok')
   return
 end
 
