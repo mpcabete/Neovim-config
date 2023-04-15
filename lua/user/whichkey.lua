@@ -77,6 +77,7 @@ local opts = {
   noremap = true, -- use `noremap` when creating keymaps
   nowait = true, -- use `nowait` when creating keymaps
 }
+-- comment
 
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
@@ -87,7 +88,7 @@ local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+  ["c"] = { "<cmd>Logsitter<CR>", "Log" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",

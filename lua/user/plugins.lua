@@ -40,6 +40,9 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
+use "rebelot/kanagawa.nvim"
+use { "ellisonleao/gruvbox.nvim" }
+
   use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } -- Have packer manage itself
   use { "nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7" } -- Useful lua functions used by lots of plugins
   use { "windwp/nvim-autopairs", commit = "4fc96c8f3df89b6d23e5092d31c866c53a346347" } -- Autopairs, integrates with both cmp and treesitter
@@ -92,6 +95,7 @@ return packer.startup(function(use)
 	-- Git
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
 
+  use {"gaelph/logsitter.nvim", commit = "250cc2314874a73f37642b2bc637ff1c1af7ed78" }
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
